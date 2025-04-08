@@ -364,7 +364,7 @@ const CarListingPage = () => {
               <div className="p-4">
                 <div className='flex justify-between items-center mb-2'>
                 <span className="text-xl  font-bold font-sans text-gray-800 mb-1">{car.name} </span>
-                <span className='font-bold font-sans text-xl'>₹{car.price}/day</span>
+                <span className='font-bold font-sans text-black text-xl'>₹{car.price}/day</span>
                </div>
                   
              

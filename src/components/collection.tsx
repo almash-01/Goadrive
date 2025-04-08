@@ -43,7 +43,7 @@ const FeaturedCars = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 font-sans text-black">
+    <div className="w-full max-w-7xl mx-auto px-4 py-12 font-sans bg-white text-black">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold">Featured Vehicles</h2>
         <Link href="/pages/allcars">

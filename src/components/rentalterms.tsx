@@ -101,7 +101,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
 const CarRentalTerms = () => {
   const faqStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "https://www.goadrive.com/",
     "@type": "FAQPage",
     mainEntity: faqData.map((faq) => ({
       "@type": "Question",
@@ -130,8 +130,8 @@ const CarRentalTerms = () => {
           content="Check FAQs, rental policies, and terms before renting a car in Goa with or without a driver."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/terms" />
-        <meta property="og:image" content="https://yourdomain.com/images/car-rental.jpg" />
+        <meta property="og:url" content="https://www.goadrive.com/" />
+        <meta property="og:image" content="https://www.goadrive.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

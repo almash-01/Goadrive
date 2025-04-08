@@ -78,9 +78,9 @@ const Footer = () => {
             "@context": "https://schema.org",
             "@type": "CarRental",
             name: "GOA DRIVE",
-            image: "https://your-domain.com/Rent-A-Car-Web-Banner-14.png", // replace with your actual image path
-            "@id": "https://your-domain.com", // replace with your real domain
-            url: "https://your-domain.com",
+            image: "https://www.goadrive.com/Rent-A-Car-Web-Banner-14.png", // replace with your actual image path
+            "@id": "https://www.goadrive.com/", // replace with your real domain
+            url: "https://www.goadrive.com/",
             telephone: "+918975966188",
             address: {
               "@type": "PostalAddress",

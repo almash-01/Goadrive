@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Phone, MessageCircle, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import FilterComponent from '@/components/filter';
 import Navbar from '@/components/navbar';
 import CarRentalTerms from '@/components/rentalterms';
@@ -336,9 +337,9 @@ const CarListingPage = () => {
       <FilterComponent
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        selectedTransmission={selectedTransmission} // Changed from selectedCategory
-        setSelectedTransmission={setSelectedTransmission} // Changed from setSelectedCategory
-        transmissions={transmissions} // Changed from categories
+        selectedTransmission={selectedTransmission}
+        setSelectedTransmission={setSelectedTransmission}
+        transmissions={transmissions}
         filters={filters}
         setFilters={setFilters}
       />
@@ -354,16 +355,18 @@ const CarListingPage = () => {
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={() => handleCardClick(car)}
             >
-              <div className="h-48 bg-gray-200">
-                <img 
-                  src={car.images[0]} // Display first image in grid
+              <div className="h-48 bg-gray-200 relative">
+                <Image 
+                  src={car.images[0]}
                   alt={car.name} 
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
               <div className="p-4">
                 <div className='flex justify-between items-center mb-2'>
-                <span className="text-xl  font-bold font-sans text-gray-800 mb-1">{car.name} </span>
+                <span className="text-xl font-bold font-sans text-gray-800 mb-1">{car.name} </span>
                 <span className='font-bold font-sans text-black text-xl'>₹{car.price}/day</span>
                </div>
                   
@@ -385,7 +388,7 @@ const CarListingPage = () => {
               className="mt-4 text-blue-600 hover:text-blue-800"
               onClick={() => {
                 setSearchTerm('');
-                setSelectedTransmission(''); // Changed from setSelectedCategory
+                setSelectedTransmission('');
                 setFilters({
                   transmission: '',
                   fuelType: '',
@@ -409,7 +412,7 @@ const CarListingPage = () => {
                 className="fixed top-4 right-4 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 z-10"
                 onClick={closeDialog}
               >
-                <X className="h-6 w-6  text-gray-700" />
+                <X className="h-6 w-6 text-gray-700" />
               </button>
             </div>
             
@@ -420,12 +423,14 @@ const CarListingPage = () => {
     <p className="text-gray-600 font-sans mb-4">{selectedCar.year}</p>
     
     {/* Image carousel */}
-    <div className="mb-4 relative">
-      <div className="rounded-lg overflow-hidden">
-        <img 
+    <div className="mb-4 relative aspect-video">
+      <div className="rounded-lg overflow-hidden relative h-64 w-full">
+        <Image 
           src={selectedCar.images[currentImageIndex]} 
           alt={`${selectedCar.name} - Image ${currentImageIndex + 1}`} 
-          className="rounded-lg object-cover w-full h-full"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="rounded-lg object-cover"
         />
       </div>
       
@@ -467,14 +472,16 @@ const CarListingPage = () => {
           <div 
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`h-16 w-16 flex-shrink-0 cursor-pointer rounded-md overflow-hidden border-2 ${
+            className={`h-16 w-16 flex-shrink-0 cursor-pointer rounded-md overflow-hidden border-2 relative ${
               index === currentImageIndex ? 'border-blue-500' : 'border-transparent'
             }`}
           >
-            <img 
+            <Image 
               src={image} 
               alt={`${selectedCar.name} thumbnail ${index + 1}`}
-              className="h-full w-full object-cover" 
+              fill
+              sizes="64px"
+              className="object-cover" 
             />
           </div>
         ))}
@@ -483,10 +490,10 @@ const CarListingPage = () => {
     
     {/* Vehicle Details */}
     <div className="mb-4">
-      <h3 className="font-bold font-sans text-xl text-gray-800  mb-2">Vehicle Details</h3>
+      <h3 className="font-bold font-sans text-xl text-gray-800 mb-2">Vehicle Details</h3>
       <div className="grid grid-cols-2 gap-y-1 text-sm">
       <div className="text-black">Daily Rate:</div>
-      <div className="font-bold text-xl font-sans ">₹{selectedCar.price}/day</div>
+      <div className="font-bold text-xl font-sans">₹{selectedCar.price}/day</div>
         <div className="text-black">Transmission:</div>
         <div className="text-black">{selectedCar.transmission}</div>
         <div className="text-black">Year:</div>
@@ -521,8 +528,8 @@ const CarListingPage = () => {
   <div className="bg-white p-6 flex flex-col items-center justify-center">
     {/* Company Logo */}
     <div className="mb-3 md:mb-7 flex justify-center">
-      <div className="w-52 h-auto flex items-center justify-center">
-        <img
+      <div className="w-52 h-auto flex items-center justify-center relative">
+        <Image
           src="/ALMAS.png"
           alt="Company Logo"
           width={150}

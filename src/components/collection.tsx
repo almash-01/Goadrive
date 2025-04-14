@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const FeaturedCars = () => {
   // Sample car data - in a real application, this would come from an API or props
@@ -60,10 +61,13 @@ const FeaturedCars = () => {
             <Link key={car.id} href="/pages/allcars" className="block" style={{ width: '280px' }}>
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer h-full">
                 <div className="relative h-48 bg-gray-200">
-                  <img 
+                  <Image 
                     src={car.image} 
                     alt={car.name} 
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: 'cover' }}
+                    priority={car.id === 1}
                   />
                 </div>
                 <div className="p-4">
@@ -113,10 +117,13 @@ const FeaturedCars = () => {
           <Link key={car.id} href="/pages/allcars" className="block">
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
               <div className="relative h-48 bg-gray-200">
-                <img 
+                <Image 
                   src={car.image} 
-                  alt={car.name} 
-                  className="w-full h-full object-cover"
+                  alt={car.name}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  style={{ objectFit: 'cover' }}
+                  priority={car.id === 1}
                 />
               </div>
               <div className="p-4">

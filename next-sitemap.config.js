@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://goadrive.com', // 🔁 Replace with your actual domain
+    siteUrl: 'https://goadrive.com', 
     generateRobotsTxt: true,
     sitemapSize: 5000,
   }

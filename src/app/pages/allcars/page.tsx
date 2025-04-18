@@ -78,7 +78,7 @@ const CarListingPage = () => {
       id: 4,
       name: 'Creta',
       images: ['https://i.postimg.cc/L5GCdF3y/creta-exterior-right-front-three-quarter-2.webp', 'https://i.postimg.cc/QdG40stC/creta-exterior-right-side-view-2.webp', 'https://i.postimg.cc/1RdYVD1p/creta-exterior-left-side-view.webp','https://i.postimg.cc/tCVv3798/creta-exterior-rear-view.webp'],
-      price: 3000,
+      price: 2500,
       transmission: 'Manual',
       seats: 5,
       fuelType: 'Petrol',

@@ -55,14 +55,14 @@ export default function Home() {
       {/* Call & WhatsApp Buttons */}
       <div className="fixed bottom-6 left-6 flex space-x-4 z-20">
         <a
-          href="tel:+918975966188"
+          href="tel:+919373526985"
           className="flex items-center bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-700"
         >
           <Phone className="mr-2" size={20} />
           Call Now
         </a>
         <a
-          href="https://wa.me/918975966188"
+          href="https://wa.me/919373526985"
           className="flex items-center bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600"
         >
           <MessageCircle className="mr-2" size={20} />

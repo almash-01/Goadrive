@@ -92,7 +92,7 @@ const CarListingPage = () => {
       images: ['https://i.postimg.cc/j5LmBcrS/ertiga-exterior-right-front-three-quarter-9.webp', 'https://i.postimg.cc/nzggxmHY/ertiga-exterior-right-side-view-2.webp', 'https://i.postimg.cc/0jS3yNjg/ertiga-exterior-left-rear-three-quarter.webp','https://i.postimg.cc/xjNBR6Rs/ertiga-exterior-left-side-view.webp'],
       price: 2200,
       transmission: 'Manual',
-      seats: 5,
+      seats: 7,
       fuelType: 'Petrol',
       tankCapacity: 45,
       year: 2023,

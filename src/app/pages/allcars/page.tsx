@@ -258,8 +258,8 @@ const CarListingPage = () => {
 
   // Common owner contact info
   const ownerContact: OwnerContact = {
-    phone: '+91 8975966188',
-    whatsapp: '+91 8975966188'
+    phone: '+91 9373526985',
+    whatsapp: '+91 9373526985'
   };
 
   // States

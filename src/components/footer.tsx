@@ -81,7 +81,7 @@ const Footer = () => {
             image: "https://www.goadrive.com/Rent-A-Car-Web-Banner-14.png", // replace with your actual image path
             "@id": "https://www.goadrive.com/", // replace with your real domain
             url: "https://www.goadrive.com/",
-            telephone: "+918975966188",
+            telephone: "+919373526985",
             address: {
               "@type": "PostalAddress",
               streetAddress: "7XVP+4Q5, Amrut Nagar, Gogol",
@@ -97,7 +97,7 @@ const Footer = () => {
             },
             sameAs: [
               "https://maps.app.goo.gl/jo4nsjUyiJ82QEZ38",
-              "https://wa.me/918975966188",
+              "https://wa.me/919373526985",
             ],
           }),
         }}
